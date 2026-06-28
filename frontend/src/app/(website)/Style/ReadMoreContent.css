@@ -1,0 +1,104 @@
+.readmore-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.readmore-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 25px;
+  text-align: center;
+}
+
+.readmore-title {
+  font-size: 56px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.readmore-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  max-height: 170px;
+  transition: all 0.5s ease;
+}
+
+.readmore-content.expanded {
+  max-height: 5000px;
+}
+
+.readmore-content p {
+  font-size: 15px;
+  color: #4f4f4f;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+.readmore-content a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.readmore-content h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #111;
+  margin: 45px 0 20px;
+}
+
+.readmore-content ul {
+  list-style: decimal;
+  text-align: left;
+  max-width: 800px;
+  margin: 25px auto;
+  padding-left: 25px;
+}
+
+.readmore-content li {
+  font-size: 15px;
+  color: #4f4f4f;
+  line-height: 2;
+  margin-bottom: 10px;
+}
+
+.readmore-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: underline;
+}
+
+.readmore-btn:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .readmore-section {
+    padding: 50px 0;
+  }
+
+  .readmore-title {
+    font-size: 34px;
+  }
+
+  .readmore-content h3 {
+    font-size: 24px;
+  }
+
+  .readmore-content p,
+  .readmore-content li {
+    font-size: 14px;
+  }
+
+  .readmore-content {
+    max-height: 220px;
+  }
+}

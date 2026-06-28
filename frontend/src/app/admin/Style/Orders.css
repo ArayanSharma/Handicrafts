@@ -1,0 +1,512 @@
+.orders {
+  /* color tokens */
+  --cream: #F5EFE6;
+  --paper: #FFFDF8;
+  --terracotta: #C1622D;
+  --terracotta-dark: #9A4A22;
+  --walnut: #5C4533;
+  --charcoal: #2E2620;
+  --sage-dark: #4F6336;
+  --border-tan: #E3D5BE;
+
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--charcoal);
+}
+
+/* ---- toolbar ---- */
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.filterTabs {
+  display: flex;
+  gap: 4px;
+  background-color: var(--paper);
+  border: 1px solid var(--border-tan);
+  border-radius: 10px;
+  padding: 4px;
+  overflow-x: auto;
+}
+
+.filterTab {
+  border: none;
+  background: transparent;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: #8B7D6B;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filterTab:hover {
+  color: var(--walnut);
+}
+
+.filterTabActive,
+.filterTabActive:hover {
+  background-color: var(--terracotta);
+  color: var(--cream);
+}
+
+.toolbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 11px;
+  color: #8B7D6B;
+}
+
+.searchInput {
+  width: 220px;
+  height: 36px;
+  padding: 0 12px 0 32px;
+  border-radius: 20px;
+  border: 1px solid var(--border-tan);
+  background-color: var(--paper);
+  font-size: 13px;
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.searchInput::placeholder {
+  color: #8B7D6B;
+}
+
+.searchInput:focus {
+  border-color: var(--terracotta);
+}
+
+.exportButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--border-tan);
+  border-radius: 20px;
+  background-color: var(--paper);
+  color: var(--walnut);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.exportButton:hover {
+  background-color: #FBF1E2;
+}
+
+/* ---- ledger table ---- */
+
+.card {
+  background-color: var(--paper);
+  border: 1px solid var(--border-tan);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.tableScroll {
+  overflow-x: auto;
+}
+
+.ordersHeader,
+.ordersRow {
+  display: grid;
+  grid-template-columns: 90px 1fr 1.3fr 80px 100px 70px 130px;
+  align-items: center;
+  gap: 8px;
+  min-width: 720px;
+  padding: 11px 0;
+  border-bottom: 1.5px dashed var(--border-tan);
+  font-size: 12.5px;
+}
+
+.ordersRow:last-child {
+  border-bottom: none;
+}
+
+.ordersHeader {
+  color: #8B7D6B;
+  font-size: 11px;
+}
+
+.orderId,
+.orderDate {
+  color: #8B7D6B;
+}
+
+.amount {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.badge.fulfilled {
+  background-color: #E3E8D9;
+  color: var(--sage-dark);
+}
+
+.badge.shipped {
+  background-color: #F3DCC4;
+  color: #8C4A1E;
+}
+
+.badge.pending {
+  background-color: #EDE6D8;
+  color: #7A6A4E;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  color: var(--terracotta-dark);
+  font-size: 11.5px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 6px;
+}
+
+.actionButton:hover {
+  background-color: rgba(193, 98, 45, 0.08);
+}
+
+.emptyState {
+  padding: 24px 0;
+  text-align: center;
+  color: #8B7D6B;
+  font-size: 13px;
+}
+
+/* ---- pagination ---- */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-tan);
+}
+
+.paginationText {
+  font-size: 12px;
+  color: #8B7D6B;
+}
+
+.paginationButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.pageButton {
+  border: 1px solid var(--border-tan);
+  background-color: var(--paper);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: var(--walnut);
+  cursor: pointer;
+}
+
+.pageButton:hover:not(:disabled) {
+  background-color: #FBF1E2;
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbarRight {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+}
+/* Make the table area scrollable but hide the scrollbar visually */
+.tableScroll {
+  max-height: 70vh;        /* adjust to fit your layout */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Hide scrollbar - Firefox */
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar - Chrome, Edge, Safari */
+.tableScroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+/* Hide scrollbar - IE/old Edge */
+.tableScroll {
+  -ms-overflow-style: none;
+}
+
+.orderImage {
+  display: flex;
+  align-items: center;
+}
+
+.orderThumb {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.orderThumbPlaceholder {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #9ca3af;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+.orders {
+  padding: 24px;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  overflow: hidden;
+}
+
+/* ---- Scrollable area with hidden scrollbar ---- */
+.tableScroll {
+  max-height: 65vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* old Edge/IE */
+}
+
+.tableScroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none; /* Chrome, Safari, new Edge */
+}
+
+/* ---- Fixed grid columns shared by header and rows ---- */
+.ordersHeader,
+.ordersRow {
+  display: grid;
+  grid-template-columns:
+    110px   /* Order ID */
+    70px    /* Image */
+    160px   /* Customer */
+    1fr     /* Items */
+    100px   /* Amount */
+    110px   /* Status */
+    110px   /* Date */
+    150px;  /* Action */
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+}
+
+.ordersHeader {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.ordersRow {
+  font-size: 14px;
+  border-bottom: 1px solid #f1f1f1;
+  min-height: 64px; /* fixed row height instead of growing with text */
+}
+
+.ordersRow:hover {
+  background: #fafafa;
+}
+
+/* ---- Image column ---- */
+.orderImage {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.orderThumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e5e7eb;
+}
+
+.orderThumbPlaceholder {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #9ca3af;
+  background: #f3f4f6;
+  border-radius: 6px;
+}
+
+/* ---- Truncate long text instead of wrapping the row taller ---- */
+.itemsCell,
+.customerCell {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.orderId {
+  font-weight: 600;
+  color: #111827;
+}
+
+.amount {
+  font-weight: 600;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.badge.placed {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.badge.confirmed {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.badge.processing {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.badge.shipped {
+  background: #fce7f3;
+  color: #be185d;
+}
+
+.badge.delivered {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.badge.cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.actionButton:hover {
+  background: #f9fafb;
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: #9ca3af;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+}
+
+.paginationText {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.paginationButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.pageButton {
+  padding: 6px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 13px;
+  cursor: not-allowed;
+}

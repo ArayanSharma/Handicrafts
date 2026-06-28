@@ -1,0 +1,65 @@
+.banner-section {
+  padding: 20px;
+}
+
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.banner-image {
+  object-fit: cover;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner-btn {
+  background: #fff;
+  border: none;
+  padding: 14px 34px;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .banner-wrapper {
+    height: 220px;
+  }
+
+  .banner-content {
+    left: 50%;
+    width: 90%;
+  }
+
+  .banner-subtitle {
+    font-size: 12px;
+  }
+
+  .banner-title {
+    font-size: 24px;
+  }
+
+  .banner-text {
+    font-size: 14px;
+  }
+
+  .banner-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

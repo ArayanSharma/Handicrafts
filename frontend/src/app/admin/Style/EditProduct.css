@@ -1,0 +1,79 @@
+.edit-wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-form {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.edit-form h2 {
+  margin-bottom: 25px;
+  color: #c96b2c;
+}
+
+.edit-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.edit-field label {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.edit-field input,
+.edit-field textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.edit-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.edit-images {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.preview-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.update-btn {
+  background: #c96b2c;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.update-btn:hover {
+  opacity: 0.9;
+}
+
+.edit-loading {
+  padding: 40px;
+  font-size: 20px;
+}

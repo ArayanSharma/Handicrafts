@@ -1,0 +1,277 @@
+/* ==========================
+   TOP BAR
+========================== */
+
+.topbar {
+  background: #E9C6A0;
+  height: 38px;
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 14px;
+  color: #111;
+}
+
+/* Sliding Offer Text */
+
+.offer-wrapper {
+  width: 400px;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.offer-slide {
+  position: absolute;
+  white-space: nowrap;
+  font-weight: 600;
+
+  animation: slideText 3s ease-in-out;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  15% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  85% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-weight: 500;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0px 0px;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-item span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo img {
+  height: 100px;
+  object-fit: contain; 
+   
+}
+
+/* ==========================
+   MENU
+========================== */
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #9b7750;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.menu-item:hover {
+  color: #9b7750;
+}
+
+/* ==========================
+   HOT SALE BADGE
+========================== */
+
+.sale-item {
+  position: relative;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hot-badge {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: #e53935;
+  color: #fff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* ==========================
+   ICONS
+========================== */
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.icons svg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.icons svg:hover {
+  color: #9b7750;
+}
+
+.cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+
+  width: 18px;
+  height: 18px;
+
+  background: #1f5f39;
+  color: white;
+
+  border-radius: 50%;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+  .menu {
+    gap: 20px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+
+  .contact-info {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0 20px;
+  }
+
+  .navbar-container {
+    padding: 20px;
+  }
+
+  .logo img {
+    height: 70px;
+  }
+}

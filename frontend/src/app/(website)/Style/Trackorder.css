@@ -1,0 +1,231 @@
+.account-page {
+  background: #fff;
+  padding: 35px 0 110px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Breadcrumb */
+
+.breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 14px;
+  color: #777;
+
+  margin-bottom: 18px;
+}
+
+.breadcrumb .active {
+  color: #111;
+}
+
+.dot {
+  color: #999;
+}
+
+/* Heading */
+
+.page-header {
+  text-align: center;
+  margin-bottom: 110px;
+}
+
+.page-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.page-header p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+}
+
+.page-header strong {
+  color: #000;
+  font-weight: 700;
+}
+
+/* Two Column Layout */
+
+.account-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* Titles */
+
+.login-section h2,
+.register-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 26px;
+}
+
+/* Inputs */
+
+.input-field {
+  width: 100%;
+  height: 48px;
+
+  border: 1px solid #ececec;
+  border-radius: 30px;
+
+  padding: 0 18px;
+
+  font-size: 14px;
+  color: #111;
+
+  background: #fff;
+
+  margin-bottom: 16px;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.input-field:focus {
+  border-color: #111;
+}
+
+.input-field::placeholder {
+  color: #999;
+}
+
+/* Forgot Password */
+
+.forgot-password {
+  display: inline-block;
+  margin-top: 6px;
+  margin-bottom: 34px;
+
+  font-size: 14px;
+  color: #111;
+
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Register Text */
+
+.register-section p {
+  max-width: 520px;
+
+  font-size: 15px;
+  line-height: 1.9;
+
+  color: #555;
+
+  margin-bottom: 34px;
+}
+
+/* Buttons */
+
+.black-btn {
+  width: 100%;
+  height: 46px;
+
+  border: none;
+  border-radius: 999px;
+
+  background: #000;
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.black-btn:hover {
+  background: #222;
+}
+
+/* Desktop alignment */
+
+.login-section {
+  padding-right: 10px;
+}
+
+.register-section {
+  padding-left: 10px;
+}
+
+/* Tablet */
+
+@media (max-width: 991px) {
+  .page-header {
+    margin-bottom: 70px;
+  }
+
+  .page-header h1 {
+    font-size: 30px;
+  }
+
+  .account-wrapper {
+    gap: 50px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .account-page {
+    padding: 30px 0 70px;
+  }
+
+  .page-header {
+    margin-bottom: 50px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+  }
+
+  .page-header p {
+    font-size: 14px;
+  }
+
+  .account-wrapper {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .login-section,
+  .register-section {
+    padding: 0;
+  }
+
+  .login-section h2,
+  .register-section h2 {
+    font-size: 22px;
+  }
+
+  .input-field {
+    height: 46px;
+  }
+
+  .black-btn {
+    height: 48px;
+  }
+}

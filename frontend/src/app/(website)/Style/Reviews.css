@@ -1,0 +1,174 @@
+.reviews-section {
+  padding: 40px 0 80px;
+  background: #ffff;
+}
+
+.reviews-container {
+  width: 95%;
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* tabs */
+
+.reviews-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  background: transparent;
+  border: none;
+  padding: 15px 22px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.tab.active {
+  background: white;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+/* filter */
+
+.reviews-filter {
+  padding: 18px 0;
+}
+
+.reviews-filter select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+}
+
+/* masonry grid */
+
+.reviews-grid {
+  column-count: 3;
+  column-gap: 16px;
+}
+
+.review-card {
+  break-inside: avoid;
+  background: white;
+  margin-bottom: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.review-header a {
+  color: #222;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.review-header span {
+  color: #888;
+  font-size: 14px;
+}
+
+.review-stars {
+  color: #f5a623;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #efefef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.review-user h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.verified {
+  display: inline-block;
+  background: #111;
+  color: white;
+  font-size: 11px;
+  padding: 2px 8px;
+  margin-top: 4px;
+}
+
+.review-image {
+  width: 100%;
+  display: block;
+  margin-bottom: 14px;
+  border-radius: 2px;
+}
+
+.review-card h3 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.review-card p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* load button */
+
+.load-more-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.load-more-btn {
+  border: none;
+  background: black;
+  color: white;
+  padding: 16px 40px;
+  border-radius: 40px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.load-more-btn:hover {
+  opacity: .9;
+}
+
+/* responsive */
+
+@media (max-width: 991px) {
+  .reviews-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-grid {
+    column-count: 1;
+  }
+
+  .review-card h3 {
+    font-size: 22px;
+  }
+}

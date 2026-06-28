@@ -1,0 +1,234 @@
+
+
+.footer {
+  background: #f5ede2;
+  border-top: 1px solid #e4d8ca;
+}
+
+/* =========================
+   MARQUEE
+========================= */
+
+.footer-marquee {
+  overflow: hidden;
+  border-bottom: 1px solid #ddd1c1;
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.footer-marquee-track span {
+  font-size: 26px;
+  color: #444;
+  margin-right: 100px;
+  white-space: nowrap;
+}
+.star{
+    margin-left: 5px;
+    font-size: -5px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.footer-container {
+  max-width: 1800px;
+  margin: auto;
+  padding: 30px 70px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns:
+    1.5fr
+    1fr
+    1fr
+    1.6fr;
+  gap: 80px;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.footer h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #000;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.address {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #333;
+  font-size: 17px;
+  line-height: 2;
+}
+
+/* =========================
+   SOCIAL
+========================= */
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.social-icons a {
+  width: 52px;
+  height: 52px;
+  border: 1px solid #666;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #444;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #000;
+  color: white;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.footer ul {
+  list-style: none;
+}
+
+.footer ul li {
+  margin-bottom: 18px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #000;
+  padding-left: 5px;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter-text {
+  font-weight: 700;
+  margin-bottom: 25px;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 14px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  height: 62px;
+  border-radius: 40px;
+  border: 1px solid #d8d0c6;
+  background: transparent;
+  padding: 0 28px;
+  font-size: 17px;
+  outline: none;
+}
+
+.newsletter-form button {
+  min-width: 210px;
+  border: none;
+  border-radius: 40px;
+  background: #000;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+  border-top: 1px solid #ddd1c1;
+  margin-top: 45px;
+  padding-top: 25px;
+  text-align: end;
+
+  font-size: 16px;
+  color: #444;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 30px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-marquee-track span {
+    font-size: 15px;
+    margin-right: 60px;
+  }
+}
